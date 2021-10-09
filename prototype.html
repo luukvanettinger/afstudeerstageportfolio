@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Afstudeerstage | Portfolio</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i"
+        rel="stylesheet">
+
+        <!-- Bootstrap CSS File -->
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Libraries CSS Files -->
+        <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link href="lib/hover/hover.min.css" rel="stylesheet">
+
+        <!-- Blog Stylesheet File -->
+        <link href="css/blog.css" rel="stylesheet">
+
+        <!-- Main Stylesheet File -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- Responsive css -->
+        <link href="css/responsive.css" rel="stylesheet">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- start section navbar -->
+    <nav id="main-nav-subpage" class="subpage-nav">
+        <div class="row">
+            <div class="container">
+
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </div>
+
+                <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+                <ul class="nav-menu list-unstyled">
+                    <li><a target="" href="" class="smoothScroll">Leeswijzer</a></li>
+                    <li><a target="" href="" class="smoothScroll">Begrippenlijst</a></li>
+                  </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End section navbar -->
+    <!-- start section main content -->
+    <div class="main-content paddsection">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="row">
+                        <div class="container-main single-main">
+                            <div class="col-md-12">
+                                <div class="block-main mb-30">
+
+                                    <div class="content-main single-post padDiv">
+                                        <div>
+                                            <h4 class="titleProduct">Prototype booking & return flow</h4>
+                                        </div>
+                    
+            
+                                        <p class="mb-30">
+                                            Nu er een database model is ontworpen zal er onderzocht worden aan de hand van een prototype of dit database model ook effectief met de use cases van het systeem om kan gaan. 
+                                            Op basis van de resultaten van het prototype kunnen er indien nodig aanpassingen gemaakt worden aan het database model.
+                                        </p>
+                                        <blockquote>
+                                            Uit welke structuur moet het database model bestaan om met de data van de verschillende use cases van de mobile app om te gaan?
+                                        </blockquote>
+                                        <br><br>
+                                            <div class="journal-txt">
+                                                <h4><a href="#">Aanpak</a></h4>
+                                            </div>
+                                            <p class="mb-30">
+                                                Door middel van de onderzoeksstrategie workshop met behulp van de onderzoeksmethode prototyping, ga ik op basis van het database model 
+                                                van voorgaande onderzoek een prototype bouwen waarmee ik wil toetsen of het database model effectief is met het omgaan van de use cases van het systeem.
+                                                Hierbij werk ik de booking en return flows uit waarmee de gebruiker items kan uitlenen aan een member en terug brengen wanneer deze member klaar is met het uitlenen van de spullen.
+                                                Wanneer hier bevindingen uitkomen waaruit blijkt dat het database model aangepast moet worden, zal dit gedaan worden en in de conclusie worden verwerkt. 
+                                            </p>
+                                            <br><br>
+                                            <div class="journal-txt">
+                                                <h4><a href="#">Resultaat</a></h4>
+                                            </div>
+                                            <p>
+                                                Hieronder zijn de booking flow (links) en return flow (rechts) te zien, hierin worden 3 t-shirts en 2 basketballen uitgeleend aan een member genaamd John Doe. 
+                                                Deze booking wordt vervolgens toegevoegd aan rentings en is dan ook in de return flow terug te vinden.
+                                            </p>
+                                            <br>
+                                            <img src="images/videos/bookingPrototype.gif" class="malvaeVideo">
+                                            <img src="images/videos/returnPrototype.gif" class="malvaeVideo">
+                                            <br>
+                                            <p>
+                                                In de eerste versie van het database model werden sizes van items binnen een array in het document van het item opgeslagen (zie afbeelding hieronder). Voor het laten zien en selecteren van
+                                                de sizes werkte dit prima, maar bij het maken van de booking order moet deze hoeveelheid van de quantity van de item size afgeteld worden. Firebase support het niet om 
+                                                arrays binnen een document aan te passen vanuit een request.
+                                            </p>
+                                            <img src="images/firebase1.png" class="malvae2" alt="image">
+                                            <p>
+                                                De logische oplossing hierop was het aanmaken van een collectie voor elk document dat sizes heeft (zie afbeelding hieronder).
+                                                Dit werkte inderdaad als een goede oplossing, zowel het laten zien en selecteren van de item sizes als het maken van een booking order werkte met deze structuur goed.
+                                                Het probleem met deze data structuur was het feit dat zowel de web variant als de app later in de realisatie fase met big data moet werken om de verschillende data grafieken te genereren.
+                                                Hiervoor zal er gebruik gemaakt worden van big query en daarvoor was het noodzakelijk dat de items collectie een platte data structuur heeft en dus geen subcollecties.
+                                            </p>
+                                            <img src="images/firebase2.png" class="malvae2" alt="image">
+                                            <p>
+                                                Als oplossing hiervoor is er gekozen voor het apart opslaan van item sizes waarin elke item size zijn eigen document heeft (zie afbeelding hieronder).
+                                                Op deze manier werkt de functionaliteit van de app en kan er in de realisatie fase van de app gebruik gemaakt worden van big query voor het genereren van 
+                                                complexe data queries.
+                                            </p>
+                                            <img src="images/firebase3.png" class="malvae2" alt="image">
+                                            <br><br><br>
+                                            <br><br>
+                                            <div class="journal-txt">
+                                                <h4><a href="#">Conclusie</a></h4>
+                                            </div>
+                                            <p>
+                                                Uit het prototype is gebleken dat het inventarisatie en uitlening systeem effectief werkt met het ontworpen database model. 
+                                                Er bleken nog wat aanpassingen nodig te zijn voor de data structuur van het opslaan van item sizes, maar na verschillende oplossingen is de juiste 
+                                                structuur gevonden en deze is ook gelijk aangepast in het database model. Het database model zal actief bijgehouden worden voor als er in de realisatie fase 
+                                                bevindingen onstaan waaruit blijkt dat er aanpassingen nodig zijn voor het ontworpen database model. Voor nu kan er geconcludeerd worden dat 
+                                                wanneer de realisatie fase van start gaat, er op het ontworpen database model gesteund en gebouwd kan worden.
+                                            </p>
+
+                                        <br><br><br>
+                                        <div class="buttonContainer">
+                                            <a href="database_model.html">
+                                                <div class="btn">
+                                                    <i class="ion-android-arrow-back"></i> Previous
+                                                </div>
+                                            </a>
+                                            <div style="opacity: 0">hhh</div>
+                                            <a href="project_document.html">
+                                                <div class="btn">
+                                                NEXT <i class="ion-android-arrow-forward"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <br>
+                                        <a href="index.html">
+                                            <div class="btn">
+                                            Home <i class="ion-home"></i>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!--  </div> -->
+    <!-- start section main content -->
+
+
+
+            <!-- JavaScript Libraries -->
+            <script src="lib/jquery/jquery.min.js"></script>
+            <script src="lib/jquery/jquery-migrate.min.js"></script>
+            <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/typed/typed.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+            <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+
+            <!-- Template Main Javascript File -->
+            <script src="js/main.js"></script>
+
+</body>
+
+</html>
