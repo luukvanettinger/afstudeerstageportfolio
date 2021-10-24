@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Afstudeerstage | Portfolio</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i"
+        rel="stylesheet">
+
+        <!-- Bootstrap CSS File -->
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Libraries CSS Files -->
+        <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link href="lib/hover/hover.min.css" rel="stylesheet">
+
+        <!-- Blog Stylesheet File -->
+        <link href="css/blog.css" rel="stylesheet">
+
+        <!-- Main Stylesheet File -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- Responsive css -->
+        <link href="css/responsive.css" rel="stylesheet">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- start section navbar -->
+    <nav id="main-nav-subpage" class="subpage-nav">
+        <div class="row">
+            <div class="container">
+
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </div>
+
+                <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+                <ul class="nav-menu list-unstyled">
+                    <li><a target="" href="leeswijzer.html" class="smoothScroll">Leeswijzer</a></li>
+                    <li><a target="" href="" class="smoothScroll">Begrippenlijst</a></li>
+                  </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End section navbar -->
+    <!-- start section main content -->
+    <div class="main-content paddsection">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="row">
+                        <div class="container-main single-main">
+                            <div class="col-md-12">
+                                <div class="block-main mb-30">
+
+                                    <div class="content-main single-post padDiv">
+                                        <div>
+                                            <h4 class="titleProduct">Offline prototypes</h4>
+                                        </div>
+                    
+            
+                                        <p class="mb-30">
+                                            Uit voorgaand onderzoek is gebleken dat Firebase offline data persistence ondersteunt en dit als oplossing kan dienen voor het
+                                            probleem van netwerk gebrek in vluchtelingen kampen bij het gebruik van de app. Deze bevinding zal verder onderzocht worden door het maken van 
+                                            prototypes waarin deze techniek getest zal worden op de verschillende use cases van de app.
+                                        </p>
+                                        <blockquote>
+                                            Welke tussenoplossingen zijn er voor de mogelijkheden van de netwerk situaties?
+                                        </blockquote>
+                                        <br><br>
+                                            <div class="journal-txt">
+                                                <h4><a href="#">Aanpak</a></h4>
+                                            </div>
+                                            <p class="mb-30">
+                                                Door middel van de onderzoeksstrategie workshop met behulp van de onderzoeksmethode prototyping, ga ik de verschillende offline use cases van de app 
+                                                testen. Dit doe ik door de app op een Iphone device te runnen en hierbij verbreek ik het de internet connectie. Daarnaast houd ik de Cloud Firestore database hier langs 
+                                                om te bekijken wanneer er aanpassingen plaats vinden op basis van de inputs op het device. Op basis van deze resultaten zal er bekeken worden hoe deze 
+                                                resultaten invloed hebben op de offline use cases en of er verder onderzoek nodig is voor een oplossing op de onderzoeksvraag.
+                                            </p>
+                                            <br><br>
+                                            <div class="journal-txt">
+                                                <h4><a href="#">Resultaat</a></h4>
+                                            </div>
+                                            <p>
+                                                Er zullen voornamelijk 3 use case flows zijn die essentieel zijn voor de werking van de app. Deze 3 flows zijn hieronder beschreven. 
+                                                <br><br>
+                                                <u>1. Booking & return flow</u>, gebruikers moeten sportspullen en andere items kunnen uitlenen en terug brengen via de app. 
+                                                <br>
+                                                <u>2. Member flow</u>,  gebruikers moeten een lijst kunnen zien van de members en de uitleen activiteiten die hierbij horen. Er moeten nieuwe members aangemaakt, verwijderd en aangepast kunnen worden.
+                                                <br>
+                                                <u>3. Stock flow</u>, gebruikers moeten een lijst kunnen zien van de stock items en de hoeveelheden hiervan, deze stock items moeten in de app ook aangepast kunnen worden
+                                                <br><br>
+                                                Deze use case flows moeten bruikbaar zijn voor de gebruiker van de app in zowel online als in offline mode. 
+                                            </p>
+                                            <br><br>
+                                            <p>
+                                                <b><u>1. Aanpassen van een member</u></b>
+                                                <br>
+                                                In deze prototype wordt het aanpassen van een member offline getest. Links is de Cloud Firestore database te zien en rechts de mobile app. 
+                                                Hier wordt het geslacht van de member Harry veranderd van een man naar een vrouw. 
+                                            </p>
+                                            <video width="100%" controls>
+                                                <source src="images/videos/prototype_offline1.mp4" type="video/mp4">
+                                            </video>
+                                            <p>
+                                                <b>Resultaat</b>
+                                                <br>
+                                                Zoals is te zien in de video wordt de aanpassing offline gemaakt, maar de UI wordt wel geupdate. Dit komt doordat de app 
+                                                offline tegen een cached versie van de database praat. Zodra het device weer een internet connectie heeft wordt het bewaarde request verstuurd naar de database.
+                                                Het nadeel hiervan is zodra er meerdere gebruikers offline het geslacht van Harry aanpassen, dat het laatste request dat verzonden wordt "wint". 
+                                                Wanneer gebruikers langere periodes zonder een netwerk verbinding zitten kan dit verlies van data requests veroorzaken.
+                                            </p>
+                                            <br><br>
+                                            <p>
+                                                <b><u>2. Aanmaken van meerdere bookings</u></b>
+                                                <br>
+                                                In deze prototype wordt het aanmaken van meerdere bookings getest. Ook hier is links de Cloud Firestore database te zien en rechts de mobile app. 
+                                                3 items worden achter elkaar geboekt terwijl het device geen netwerk verbinding heeft.
+                                            </p>
+                                            <video width="100%" controls>
+                                                <source src="images/videos/prototype_offline2.mp4" type="video/mp4">
+                                            </video>
+                                            <p>
+                                                <b>Resultaat</b>
+                                                <br>
+                                                De items worden offline geboekt maar de aangemaakte bookings zijn nog niet in UI van de returns te zien. Zodra het device weer een netwerk verbinding heeft
+                                                worden de bookings automatisch toegevoegd aan de Cloud Firestore database. Hiermee wordt de UI van de app ook gelijk geupdate. Wat opvallend hierbij is, is dat 
+                                                de UI bij het aanmaken van een nieuw document, niet update terwijl die dit wel doet bij het aanpassen van een document.
+                                            </p>
+                                            <br><br>
+                                            <p>
+                                                <b><u>3. Verwijderen van een booking</u></b>
+                                                <br>
+                                                In deze prototype wordt het verwijderen van een booking getest. Dit wordt vanuit de member detail pagina gedaan, in het scherm hierboven
+                                                zijn alle members te zien en wanneer een member een booking heeft die al terug gebracht had moeten zijn, wordt dit aangegeven met het rode label "Due".
+                                            </p>
+                                            <video width="100%" controls>
+                                                <source src="images/videos/prototype_offline3.mp4" type="video/mp4">
+                                            </video>
+                                            <p>
+                                                <b>Resultaat</b>
+                                                <br>
+                                                De booking van Jane mood wordt offline verwijderd. Wanneer deze wordt verwijderd wordt de UI ook aangepast, daarnaast verdwijnt 
+                                                het rode "Due" label ook. Zodra de netwerk verbinding weer aanwezig is wordt het document ook in de Cloud Firestore database verwijderd. 
+                                                Opvallend hier is dat bij het verwijderen en aanpassen van documenten, de UI mee veranderd maar dat dit niet gebeurd bij het aanmaken van een nieuw document.
+                                            </p>
+                                            <br><br>
+                                            <div class="journal-txt">
+                                                <h4><a href="#">Conclusie</a></h4>
+                                            </div>
+                                            <p>
+                                                Uit de resultaten is gebleken dat wanneer het device geen netwerk verbinding heeft, er een kopie van de Cloud Firestore database
+                                                wordt gemaakt en verdere aanpassingen hiermee interacteren. Zodra het device weer een netwerk verbinding heeft worden de opgeslagen requests van de user 
+                                                naar de database verstuurd en synchroniseerd het device met de Cloud Firestore database. Hierbij viel op dat de UI bij het aanpassen en verwijderen van documenten 
+                                                offline werden geupdate maar dit gebeurde niet bij het aanmaken van nieuwe documenten.
+                                            </p>
+                                            <br><br><br>                                                                                 
+                                        <div class="buttonContainer">
+                                            <a href="offline_oplossingen.html">
+                                                <div class="btn">
+                                                    <i class="ion-android-arrow-back"></i> Previous
+                                                </div>
+                                            </a>
+                                            <div style="opacity: 0">hhh</div>
+                                            <a href="leeswijzer.html">
+                                                <div class="btn">
+                                                NEXT <i class="ion-android-arrow-forward"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <br>
+                                        <a href="index.html">
+                                            <div class="btn">
+                                            Home <i class="ion-home"></i>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!--  </div> -->
+    <!-- start section main content -->
+
+
+
+            <!-- JavaScript Libraries -->
+            <script src="lib/jquery/jquery.min.js"></script>
+            <script src="lib/jquery/jquery-migrate.min.js"></script>
+            <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/typed/typed.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+            <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+
+            <!-- Template Main Javascript File -->
+            <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Afstudeerstage | Portfolio</title>
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Playfair+Display:400,400i,700,700i,900,900i"
+        rel="stylesheet">
+
+        <!-- Bootstrap CSS File -->
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Libraries CSS Files -->
+        <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link href="lib/hover/hover.min.css" rel="stylesheet">
+
+        <!-- Blog Stylesheet File -->
+        <link href="css/blog.css" rel="stylesheet">
+
+        <!-- Main Stylesheet File -->
+        <link href="css/style.css" rel="stylesheet">
+
+        <!-- Responsive css -->
+        <link href="css/responsive.css" rel="stylesheet">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+
+<body>
+
+    <!-- start section navbar -->
+    <nav id="main-nav-subpage" class="subpage-nav">
+        <div class="row">
+            <div class="container">
+
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </div>
+
+                <div class="responsive"><i data-icon="m" class="ion-navicon-round"></i></div>
+
+                <ul class="nav-menu list-unstyled">
+                    <li><a target="" href="leeswijzer.html" class="smoothScroll">Leeswijzer</a></li>
+                    <li><a target="" href="" class="smoothScroll">Begrippenlijst</a></li>
+                  </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End section navbar -->
+    <!-- start section main content -->
+    <div class="main-content paddsection">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="row">
+                        <div class="container-main single-main">
+                            <div class="col-md-12">
+                                <div class="block-main mb-30">
+
+                                    <div class="content-main single-post padDiv">
+                                        <div>
+                                            <h4 class="titleProduct">Offline oplossingen</h4>
+                                        </div>
+                    
+            
+                                        <p class="mb-30">
+                                            In de vluchtelingenkampen zijn er verschillende situaties op het gebied van netwerk. In het ene kamp is er heel de dag een wifi signaal voor de kampbegeleiders en in het andere kamp zijn er gedurende de dag een aantal momenten waarop er een zwak wifi signaal beschikbaar is. Het is belangrijk dat wanneer er een gebrek aan een netwerk is in een vluchtelingenkamp, de kampbegeleiders wel gebruik kunnen blijven maken van de app. In dit onderzoek wordt er onderzocht wat de netwerk situaties zijn, welke oplossing hiervoor gebruikt kan worden en welke eisen er moeten voldoen aan de netwerk situaties. 
+                                        </p>
+                                        <blockquote>
+                                            Welke tussenoplossingen zijn er voor de mogelijkheden van de netwerk situaties?
+                                        </blockquote>
+                                        <br><br>
+                                            <div class="journal-txt">
+                                                <h4><a href="#">Aanpak</a></h4>
+                                            </div>
+                                            <p class="mb-30">
+                                                Vanuit het development team van OWOW is de eis gesteld dat er in een vluchtelingenkamp minimaal 1 moment op de dag moet zijn waarop er een netwerk verbinding is. Vanuit Klabu is gecommuniceerd dat dit het geval is en wanneer dit niet het geval is in een vluchtelingenkamp, zal de app niet optimaal werken.
+                                                <br><br>
+                                                Door middel van de onderzoeksstrategie library research zal er aan de hand van de onderzoeksmethode ‘literature study’ onderzocht worden op welke manier de app offline kan werken. Hierbij is een eis dat de techniek achter de oplossing werkt met een firebase database, aangezien deze is gekozen voor de backend van de app.
+                                                <br><br>
+                                                <b>Eisen aan de oplossing</b>
+                                                <br>
+                                                - Minimaal 1 moment per dag waarop er een netwerk verbinding is
+                                                <br>
+                                                - Firebase als database 
+                                                <br><br>
+                                                Zodra de onderzoeksvraag is beantwoord door middel van de resultaten uit het onderzoek zal er door middel van de onderzoeksstrategie workshop met behulp van de onderzoeksmethode prototyping, een prototype gebouwd worden van de app waarin wordt getoetst of de onderzochte oplossing in de praktijk ook daadwerkelijk effectief kan omgaan met het functioneren zonder netwerk.
+                                            </p>
+                                            <br><br>
+                                            <div class="journal-txt">
+                                                <h4><a href="#">Resultaat</a></h4>
+                                            </div>
+                                            <p>
+                                                <b>Firebase offline data persistence</b>
+                                                <br>
+                                                Cloud Firestore ondersteunt offline data persistence volgens de documentatie van Firebase <a target="_blank" href="https://firebase.google.com/docs/firestore/manage-data/enable-offline">(Google LLC, z.d.)</a>. Dit wordt gedaan door een kopie te maken van de Cloud Firestore data waar de app actief gebruik van maakt en dit kopie wordt in de cache van het device opgeslagen. Wanneer het device geen netwerk verbinding heeft maakt de app gebruik van cached data en zodra het device weer is verbonden met een netwerk worden alle data aanpassingen die offline zijn gemaakt gesynchroniseerd met de Cloud Firestore database.
+                                                <br><br>
+                                                Hieronder is een eenvoudige visualisatie te zien om het concept van offline data persistence en synchronisatie te verduidelijken.
+                                            </p>
+                                            <p>
+                                                <u>1. Online data transfer</u>
+                                                <br>
+                                                Wanneer er een netwerk aanwezig is wordt er een request gemaakt om 1 basketbal op te tellen aan de hoeveelheid basketballen. Deze request gaat rechtstreeks naar de database en deze aanpassing wordt real time geupdate in de app waardoor de gebruiker gelijk de aanpassing ziet in de UI.
+                                            </p>
+                                            <div style="margin-top: -100px"></div>
+                                            <img src="images/offline1.png" class="malvae"><br><br>
+                                            <p>
+                                                <u>2. Offline data transfer (cache)</u>
+                                                <br>
+                                                Wanneer een device geen netwerk verbinding heeft wordt er een kopie gemaakt van de data waar de app actief gebruik van maakt en opgeslagen op het device, dit wordt de cache genoemd. Wanneer er requests worden aangemaakt voor het toevoegen van items zullen deze requests in volgorde opgeslagen worden en wordt de cache data hier al op aangepast. Op deze wijze krijgt de gebruiker een geupdate UI te zien, ook al heeft de Cloud Firestore database deze nog niet ontvangen.
+                                            </p>
+                                            <div style="margin-top: -100px"></div>
+                                            <img src="images/offline2.png" class="malvae"><br><br>
+                                            <p>
+                                                <u>3. Data synchronisatie</u>
+                                                <br>
+                                                Zodra er weer een netwerkverbinding beschikbaar is voor de devices, worden de opgeslagen data requests naar de Cloud Firestore database verstuurd en wordt er gelijk gekeken naar data veranderingen die plaats hebben gevonden terwijl het device offline was. Deze worden gesynchroniseerd met de data die zich in de cache van het device plaats vindt. 
+                                            </p>
+                                            <div style="margin-top: -100px"></div>
+                                            <img src="images/offline3.png" class="malvae"><br><br>
+                                            <p>
+                                                <b>Side effects van offline data persistence</b>
+                                                <br>
+                                                - <u>Conflicten,</u> als er meerdere gebruikers naar hetzelfde document schrijven, zal alleen de laatste die online komt, daadwerkelijk "winnen" en deze wijziging voortzetten. Dit is niet het geval bij het verhogen of verlagen van een hoeveelheid
+                                                <br>
+                                                - <u>Performance,</u> data aanpassingen worden in de cache bijgehouden, wanneer het device een lange periode zonder netwerk functioneert, zal de performance van de app afnemen. 
+                                                <br>
+                                                - <u>Active data only,</u> er wordt alleen een kopie gemaakt en opgeslagen in de cache van data waar de app actief gebruik van maakt, dus niet heel complete kopie van alle data in de database.
+                                                <br><br>
+                                                Deze side effects hebben weinig invloed op de werking van de app zolang er ongeveer 1 keer per dag een verbinding is met een netwerk. Offline data persistence is niet bestendig tegen offline gebruik voor weken/maanden lange periodes. 
+                                            </p>
+                                            <br><br>
+                                            <div class="journal-txt">
+                                                <h4><a href="#">Conclusie & advies</a></h4>
+                                            </div>
+                                            <p>
+                                                Uit het onderzoek is een oplossing voor de onderzoeksvraag gebleken die voldoet aan de opgestelde eisen. Door middel van firebase offline data persistence en synchronisatie kunnen begeleiders uit vluchtelingenkampen ook gebruik maken van de app wanneer er een gebrek is aan een netwerk verbinding. Mijn advies dat ik hierbij geef is om deze oplossing te testen door middel van een prototype om te achterhalen of de oplossing ook daadwerkelijk in de praktijk werkt.
+                                            </p>
+                                            <br><br>                                                                                 
+                                            <div class="journal-txt">
+                                                <h4><a href="#">Bronnen</a></h4>
+                                            </div>
+                                            <p class="mb-30">
+                                                Luuk van Ettinger. (22-10-2021). offline oplossingen onderzoeksdocument. Geraadpleegd op 22 oktober 2021, van 
+                                                <a target="_blank" href="https://docs.google.com/document/d/1zejm-3mofuV78HRY0a3iflRaEyMYJgyhq75USxahIhI/edit?usp=sharing">https://docs.google.com/document/d/1zejm-3mofuV78HRY0a3iflRaEyMYJgyhq75USxahIhI/edit?usp=sharing</a>
+                                                <br><br>
+                                                Google LLC. (z.d.). Geraadpleegd op 22 oktober 2021, van 
+                                                <a target="_blank" href="https://firebase.google.com/docs/firestore/manage-data/enable-offline">https://firebase.google.com/docs/firestore/manage-data/enable-offline</a>
+                                            </p>
+
+                                        <br><br><br>
+                                        <div class="buttonContainer">
+                                            <a href="prototype.html">
+                                                <div class="btn">
+                                                    <i class="ion-android-arrow-back"></i> Previous
+                                                </div>
+                                            </a>
+                                            <div style="opacity: 0">hhh</div>
+                                            <a href="prototype_offline.html">
+                                                <div class="btn">
+                                                NEXT <i class="ion-android-arrow-forward"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <br>
+                                        <a href="index.html">
+                                            <div class="btn">
+                                            Home <i class="ion-home"></i>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!--  </div> -->
+    <!-- start section main content -->
+
+
+
+            <!-- JavaScript Libraries -->
+            <script src="lib/jquery/jquery.min.js"></script>
+            <script src="lib/jquery/jquery-migrate.min.js"></script>
+            <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="lib/typed/typed.js"></script>
+            <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+            <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+
+            <!-- Template Main Javascript File -->
+            <script src="js/main.js"></script>
+
+</body>
+
+</html>
