@@ -324,6 +324,13 @@ nav ul li a {
   padding-top: 190px;
 }
 
+#about2 {
+  width: 100%;
+  height: auto;
+  background: white;
+  padding-top: 100px;
+}
+
 #about .div-img-bg {
   padding-bottom: 30px;
   border: 20px solid #b8a07e;
@@ -345,7 +352,20 @@ nav ul li a {
   max-width: 90%;
 }
 
+#about2 .about-descr .p-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  text-align: left;
+  max-width: 90%;
+}
+
 #about .about-descr .separator {
+  max-width: 80%;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+#about2 .about-descr .separator {
   max-width: 80%;
   margin-bottom: 0;
   text-align: left;
