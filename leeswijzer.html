@@ -98,7 +98,7 @@
                                         <hr>
                                         <br>
                                         <p>
-                                            Dit onderzoek is gestart door middel van het opstellen van een <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/project_document.html"><u>project document</u></a>. Hierin wordt onderzocht tegen welk probleem de opdrachtgever aan loopt en op basis hiervan zijn onderzoeksvragen opgesteld die een onderbouwde oplossing voor het probleem moeten gaan geven. De onderzoeksvraag luidt als volgt:
+                                            Dit onderzoek is gestart door middel van het opstellen van een <a target="_blank" href="project_document.html"><u>project document</u></a>. Hierin wordt onderzocht tegen welk probleem de opdrachtgever aan loopt en op basis hiervan zijn onderzoeksvragen opgesteld die een onderbouwde oplossing voor het probleem moeten gaan geven. De onderzoeksvraag luidt als volgt:
                                             <br><br>
                                             <i>“Hoe kan het faciliteren van het uitlenen van sportspullen binnen vluchtelingenkampen verbeterd worden door middel van mobiele technologie?”</i>
                                             <br><br>
@@ -114,14 +114,14 @@
                                             <br>
                                             • wettelijke vraagstukken. 
                                             <br><br>
-                                            Deze zullen in de loop van het stagetraject beantwoord worden door middel van de onderzoeksmethodes- en strategieën. Voor toelichting van de begrippen, zie de <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/begrippenlijst.html"><u>begrippenlijst</u></a>.
+                                            Deze zullen in de loop van het stagetraject beantwoord worden door middel van de onderzoeksmethodes- en strategieën. Voor toelichting van de begrippen, zie de <a target="_blank" href="begrippenlijst.html"><u>begrippenlijst</u></a>.
                                         </p>
                                         <br>
                                         <div class="journal-txt">
                                             <h4><a href="">Huidige situatie vraagstukken</a></h4>
                                         </div>
                                         <p>
-                                            Voordat er gekeken kan worden naar de technische vraagstukken is het van belang te onderzoeken wat de huidige situatie van het uitlening systeem van Klabu is, welke problemen hier ontstaan en waarom er gekozen is voor een mobiele oplossing. Deze vragen zijn onderzocht door middel van een  <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/expert_interview.html"><u>expert interview</u></a> over de huidige situatie van Klabu. 
+                                            Voordat er gekeken kan worden naar de technische vraagstukken is het van belang te onderzoeken wat de huidige situatie van het uitlening systeem van Klabu is, welke problemen hier ontstaan en waarom er gekozen is voor een mobiele oplossing. Deze vragen zijn onderzocht door middel van een  <a target="_blank" href="expert_interview.html"><u>expert interview</u></a> over de huidige situatie van Klabu. 
                                             <br><br>
                                             Uit de resultaten is gebleken dat er in de vluchtelingenkampen gebruik wordt gemaakt van Google Sheets voor de inventarisatie en uitleningen van sportspullen. Het probleem dat hierbij ontstaat is voornamelijk dat er geen algemeen data overzicht is van de inventarisatie. Er kunnen geen bevindingen of conclusies gemaakt worden over de kwaliteit van de sportspullen en tevredenheid van de vluchtelingen. Volgens Klabu is het niet zo zeer dat de huidige situatie problematisch is, of dat dit fout gaat, maar dat de huidige situatie beter kan en dat ze meer inzicht kunnen krijgen in hun doel. De visie van Klabu is namelijk het blijer maken van vluchtelingen in vluchtelingenkampen door middel van sport en dit is in de huidige situatie niet eenvoudig meetbaar. Door het gebruik van een mobile app kan Klabu bij het uitlenen van sportspullen, data verzamelen over de tevredenheid van de vluchtelingen met betrekking tot de uitgeleende sportspullen. Op deze manier wordt de de blijheid van vluchtelingen duidelijk en gemakkelijk meetbaar.  
                                             <br><br>
@@ -132,27 +132,27 @@
                                             <h4><a href="">Data technische vraagstukken</a></h4>
                                         </div>
                                         <p>
-                                            De mobiele oplossing voor het probleem van Klabu moet om kunnen gaan met verschillende soorten data. Hiervoor is er een onderbouwd <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/database_model.html"><u>database model</u></a> ontworpen dat gebruikt zal worden in de realisatie van de mobile app. Dit model is tot stand gekomen door te kijken naar de verschillende use cases van de app. Deze use cases zijn verdeeld onder de 3 verschillende gebruikers die van de app gebruik zullen maken, de “super-admin”, “admin” en “user”. Op basis van deze use cases is er een data requirement list opgesteld waarin terug te vinden is welke data er allemaal verzameld zal worden voor het functioneren van de mobile app. Deze data requirement list is uiteindelijk gevisualiseerd in een database model waarin de relaties tussen de verschillende data collecties zijn vormgegeven. 
+                                            De mobiele oplossing voor het probleem van Klabu moet om kunnen gaan met verschillende soorten data. Hiervoor is er een onderbouwd <a target="_blank" href="database_model.html"><u>database model</u></a> ontworpen dat gebruikt zal worden in de realisatie van de mobile app. Dit model is tot stand gekomen door te kijken naar de verschillende use cases van de app. Deze use cases zijn verdeeld onder de 3 verschillende gebruikers die van de app gebruik zullen maken, de “super-admin”, “admin” en “user”. Op basis van deze use cases is er een data requirement list opgesteld waarin terug te vinden is welke data er allemaal verzameld zal worden voor het functioneren van de mobile app. Deze data requirement list is uiteindelijk gevisualiseerd in een database model waarin de relaties tussen de verschillende data collecties zijn vormgegeven. 
                                             <br><br>
-                                            Vervolgens is er onderzocht of dit database model daadwerkelijk werkt in de praktijk door het bouwen van een <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/prototype.html"><u>prototype</u></a> voor de meest gebruikte en belangrijkste use case, namelijk het uitlenen en terugbrengen van de sportspullen. Hieruit zijn bevindingen gekomen waaruit bleek dat de manier van item sizes (maten van sportspullen) opslaan niet op de juiste wijze werd gedaan. Door verschillende iteraties van het opslaan van de item sizes in een array van een item document, naar het opslaan van item sizes in een sub collectie per document, is de uiteindelijke conclusie gekomen dat item sizes behandeld moeten worden als aparte en unieke items. Dit komt doordat het aanpassen van ‘arrays’ binnen een document in Firebase gelimiteerd is en sub collecties het moeilijk maken om grote datasets uit Firebase op te halen.
+                                            Vervolgens is er onderzocht of dit database model daadwerkelijk werkt in de praktijk door het bouwen van een <a target="_blank" href="prototype.html"><u>prototype</u></a> voor de meest gebruikte en belangrijkste use case, namelijk het uitlenen en terugbrengen van de sportspullen. Hieruit zijn bevindingen gekomen waaruit bleek dat de manier van item sizes (maten van sportspullen) opslaan niet op de juiste wijze werd gedaan. Door verschillende iteraties van het opslaan van de item sizes in een array van een item document, naar het opslaan van item sizes in een sub collectie per document, is de uiteindelijke conclusie gekomen dat item sizes behandeld moeten worden als aparte en unieke items. Dit komt doordat het aanpassen van ‘arrays’ binnen een document in Firebase gelimiteerd is en sub collecties het moeilijk maken om grote datasets uit Firebase op te halen.
                                         </p>
                                         <br>
                                         <div class="journal-txt">
                                             <h4><a href="">Netwerk technische vraagstukken</a></h4>
                                         </div>
                                         <p>
-                                            In de vluchtelingenkampen zijn er verschillende situaties op het gebied van netwerkverbinding. Dit kan verschillen van het hebben van een zwak netwerk signaal één keer per dag tot het hebben van een stabiele netwerkverbinding gedurende de hele dag. Het is belangrijk dat wanneer er een gebrek aan een netwerk is in een vluchtelingenkamp, de kampbegeleiders wel gebruik kunnen blijven maken van de app. Hoe de app om kan gaan met dit probleem is onderzocht in het <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/offline_oplossingen.html"><u>offline oplossing</u></a> onderzoek. Hieruit is gebleken dat de gekozen back-end, Firebase, “offline data persistence” ondersteund. Dit betekent dat er in de app een kopie gemaakt kan worden van de data die actief door het device wordt gebruikt. Deze kopie kan vervolgens opgeslagen worden in de cache van het device. Op deze manier kan de gebruiker offline gebruik blijven maken van de app met de gecachde data en zodra het device weer een netwerk verbinding heeft, wordt de cache data gesynchroniseerd met de online database.
+                                            In de vluchtelingenkampen zijn er verschillende situaties op het gebied van netwerkverbinding. Dit kan verschillen van het hebben van een zwak netwerk signaal één keer per dag tot het hebben van een stabiele netwerkverbinding gedurende de hele dag. Het is belangrijk dat wanneer er een gebrek aan een netwerk is in een vluchtelingenkamp, de kampbegeleiders wel gebruik kunnen blijven maken van de app. Hoe de app om kan gaan met dit probleem is onderzocht in het <a target="_blank" href="offline_oplossingen.html"><u>offline oplossing</u></a> onderzoek. Hieruit is gebleken dat de gekozen back-end, Firebase, “offline data persistence” ondersteund. Dit betekent dat er in de app een kopie gemaakt kan worden van de data die actief door het device wordt gebruikt. Deze kopie kan vervolgens opgeslagen worden in de cache van het device. Op deze manier kan de gebruiker offline gebruik blijven maken van de app met de gecachde data en zodra het device weer een netwerk verbinding heeft, wordt de cache data gesynchroniseerd met de online database.
                                             <br><br>
                                             Hierbij is het wel van belang dat er minimaal één moment op de dag is dat er een netwerk verbinding aanwezig is. Wanneer een device meerdere dagen actief is zonder te synchroniseren, kunnen er data requests verloren gaan en wordt het totale data overzicht minder betrouwbaar. 
                                             <br><br>
-                                            Vervolgens is er onderzocht of deze theorie ook daadwerkelijk in de praktijk werkt door het bouwen van <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/prototype_offline.html"><u>offline prototypes</u></a> waarin verschillende use cases van de app zonder netwerk worden getest. Uit deze bevindingen is gebleken dat het opslaan van de database in de cache van het device werkt en dat het aanmaken, aanpassen en verwijderen van deze data gelijk in de UI van de app worden geupdate. Deze requests worden in volgorde opgeslagen en zodra er een netwerk verbinding is, worden deze requests verstuurd en wordt de cached data gesynchroniseerd met de data uit de online database.
+                                            Vervolgens is er onderzocht of deze theorie ook daadwerkelijk in de praktijk werkt door het bouwen van <a target="_blank" href="prototype_offline.html"><u>offline prototypes</u></a> waarin verschillende use cases van de app zonder netwerk worden getest. Uit deze bevindingen is gebleken dat het opslaan van de database in de cache van het device werkt en dat het aanmaken, aanpassen en verwijderen van deze data gelijk in de UI van de app worden geupdate. Deze requests worden in volgorde opgeslagen en zodra er een netwerk verbinding is, worden deze requests verstuurd en wordt de cached data gesynchroniseerd met de data uit de online database.
                                         </p>
                                         <br>
                                         <div class="journal-txt">
                                             <h4><a href="">Sociaal technische vraagstukken</a></h4>
                                         </div>
                                         <p>
-                                            In de app krijgen vluchtelingen een willekeurig gegenereerde ID (identification document) wanneer ze aan het systeem worden toegevoegd. Dit ID wordt gebruikt om de vluchtelingen te koppelen aan de uitgeleende sportspullen. Op dit moment worden vluchtelingen handmatig in de app gekoppeld aan de sportspullen die aan ze worden uitgeleend door de naam van de vluchteling in een lijstje te zoeken en te selecteren. In het <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/identiteit_koppelen.html"><u>identiteit koppelen aan sportspullen</u></a> onderzoek is er gekeken naar draadloze communicatie technieken die ingezet kunnen worden om het koppelen van de identiteit van de vluchtelingen aan de uitgeleende sportspullen te versnellen. 
+                                            In de app krijgen vluchtelingen een willekeurig gegenereerde ID (identification document) wanneer ze aan het systeem worden toegevoegd. Dit ID wordt gebruikt om de vluchtelingen te koppelen aan de uitgeleende sportspullen. Op dit moment worden vluchtelingen handmatig in de app gekoppeld aan de sportspullen die aan ze worden uitgeleend door de naam van de vluchteling in een lijstje te zoeken en te selecteren. In het <a target="_blank" href="identiteit_koppelen.html"><u>identiteit koppelen aan sportspullen</u></a> onderzoek is er gekeken naar draadloze communicatie technieken die ingezet kunnen worden om het koppelen van de identiteit van de vluchtelingen aan de uitgeleende sportspullen te versnellen. 
                                             <br><br>
                                             Hieruit is gebleken dat Klabu het beste gebruik kan maken van NFC tags (Near Field Communication). Deze kunnen bijvoorbeeld in een armbandje geplaatst worden waardoor er met behulp van de app alleen gescand hoeft te worden bij het uitlenen en terugbrengen van sportspullen. De voornaamste reden voor deze keuze is het feit dat mobiele telefonen beschikken over NFC lezers, waardoor er geen geld geïnvesteerd hoeft te worden in een draadloze communicatie lezer.
                                             <br><br>
@@ -163,7 +163,7 @@
                                             <h4><a href="">Wettelijke vraagstukken</a></h4>
                                         </div>
                                         <p>
-                                            In de app worden er verschillende data opgeslagen van zowel de vluchtelingen als van de gebruikers. In het <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/privacy_aspecten.html"><u>privacy aspecten</u></a> onderzoek is er gekeken naar welke data dit precies is en of OWOW rekening moet houden met privacy aspecten die kunnen komen kijken bij het bewaren van deze persoonsgegevens en hoe ze hier, indien nodig, mee om moeten gaan.
+                                            In de app worden er verschillende data opgeslagen van zowel de vluchtelingen als van de gebruikers. In het <a target="_blank" href="privacy_aspecten.html"><u>privacy aspecten</u></a> onderzoek is er gekeken naar welke data dit precies is en of OWOW rekening moet houden met privacy aspecten die kunnen komen kijken bij het bewaren van deze persoonsgegevens en hoe ze hier, indien nodig, mee om moeten gaan.
                                             <br><br>
                                             Uit het onderzoek is gebleken dat in de gerealiseerde applicatie voor Klabu, persoonsgegevens van gebruikers en vluchtelingen worden verzameld. Dit is een inbreuk op de privacy van deze personen en volgens de AVG-wet moet Klabu aan ten minste één van de grondslagen voldoen zodat het ophalen van de persoonsgegevens rechtmatig is. Voor Klabu is de grondslag, “toestemming”, van toepassing. Dit betekent dat Klabu toestemming moet krijgen van de persoon waarvan de persoonsgegevens worden opgeslagen. De persoonsgegevens die worden verzameld door Klabu vallen buiten de ‘uitzonderingen persoonsgegevens’ die volgens de AVG wet niet verzameld mogen worden. De AVG wet valt alleen binnen Europa en de regels voor het ophalen van persoonsgegevens buiten Europa verschillen. Landen buiten Europa zijn door de Europese Unie getoetst met een beschermingsniveau. Wanneer een land niet voldoet aan dit beschermingsniveau is de opslag slechts toegestaan op grond van één van de wettelijke bepalingen uit de AVG. Hieronder valt de uitdrukkelijke toestemming van de persoon waarvan de gegevens worden verzameld.
                                             <br><br>
@@ -174,13 +174,13 @@
                                             <h4><a href="">Eindresultaat: Klabu Mobile App</a></h4>
                                         </div>
                                         <p>
-                                            Op basis van de resultaten uit de onderzoeken is de <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/klabu_app.html"><u>Klabu mobile app</u></a> gerealiseerd. Deze app biedt een antwoord op de vraag: "Hoe kan het faciliteren van het uitlenen van sportspullen binnen vluchtelingenkampen verbeterd worden door middel van mobiele technologie?". De app geeft de kampbegeleiders een middel om sportspullen uit te lenen en een overzicht van de inventarisatie van het clubhuis. Het database model is door middel van onderzoek tot stand gekomen en deze zelfde database wordt door zowel de app als de website gebruikt. De data vanuit alle clubhuizen over de hele wereld is dus vanuit het hoofdkantoor van Klabu in Amsterdam via de website terug te vinden. Verder werkt de app offline, wat een harde eis is aangezien er niet altijd sprake is van een sterke netwerk verbinding in de clubhuizen. De vluchtelingen worden als members aangemaakt in de app en krijgen hierbij een ID gekoppeld aan hun member account. Wanneer sportspullen worden uitgeleend, wordt dit ID gekoppeld aan de uitgeleende sportspullen. Ook wordt er in de app rekening gehouden met privacy aspecten die komen kijken bij het ophalen van persoonsgegevens. Om deze data rechtvaardig op te halen heeft Klabu toestemming nodig van de vluchtelingen en dit wordt bij het aanmaken van een member gedaan door middel van het laten zien van de Klabu privacy policy, waarmee de vluchteling vervolgens akkoord moet gaan.
+                                            Op basis van de resultaten uit de onderzoeken is de <a target="_blank" href="klabu_app.html"><u>Klabu mobile app</u></a> gerealiseerd. Deze app biedt een antwoord op de vraag: "Hoe kan het faciliteren van het uitlenen van sportspullen binnen vluchtelingenkampen verbeterd worden door middel van mobiele technologie?". De app geeft de kampbegeleiders een middel om sportspullen uit te lenen en een overzicht van de inventarisatie van het clubhuis. Het database model is door middel van onderzoek tot stand gekomen en deze zelfde database wordt door zowel de app als de website gebruikt. De data vanuit alle clubhuizen over de hele wereld is dus vanuit het hoofdkantoor van Klabu in Amsterdam via de website terug te vinden. Verder werkt de app offline, wat een harde eis is aangezien er niet altijd sprake is van een sterke netwerk verbinding in de clubhuizen. De vluchtelingen worden als members aangemaakt in de app en krijgen hierbij een ID gekoppeld aan hun member account. Wanneer sportspullen worden uitgeleend, wordt dit ID gekoppeld aan de uitgeleende sportspullen. Ook wordt er in de app rekening gehouden met privacy aspecten die komen kijken bij het ophalen van persoonsgegevens. Om deze data rechtvaardig op te halen heeft Klabu toestemming nodig van de vluchtelingen en dit wordt bij het aanmaken van een member gedaan door middel van het laten zien van de Klabu privacy policy, waarmee de vluchteling vervolgens akkoord moet gaan.
                                             <br><br>
                                             De volgende stap die met dit systeem gemaakt kan worden is het meten van de tevredenheid van de vluchtelingen bij het uitlenen van sportspullen. Dit zou in de vorm van surveys in de app gedaan kunnen worden. Op deze wijze zou Klabu data kunnen ophalen over de tevredenheid van de vluchtelingen zelf zodat de visie en het doel van Klabu, het blijer maken van vluchtelingen door middel van sport, gemeten kan worden.
                                             <br><br>
-                                            De code van de mobile app is terug te vinden in de bijhorende Github repository, hierin is een ‘ReadMe’ ontworpen waarin alles terug te vinden is voor de overdraagbaarheid van de mobile app, deze is in het <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/versie_beheer.html"><u>versie beheer & overdraagbaarheid</u></a> product terug te vinden met verdere toelichting.
+                                            De code van de mobile app is terug te vinden in de bijhorende Github repository, hierin is een ‘ReadMe’ ontworpen waarin alles terug te vinden is voor de overdraagbaarheid van de mobile app, deze is in het <a target="_blank" href="versie_beheer.html"><u>versie beheer & overdraagbaarheid</u></a> product terug te vinden met verdere toelichting.
                                             <br><br>
-                                            De mobile app is in de App & Play store terug te vinden onder de naam “KLABU mZinga”, de app is ontwikkeld tot in productie, dit houdt in dat die op grote schaal gebruikt kan worden door Klabu. De zaken die zijn komen kijken bij het ontwikkelen naar productie zijn terug te vinden in het <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/bugs.html"><u>bugs & production</u></a>  product.
+                                            De mobile app is in de App & Play store terug te vinden onder de naam “KLABU mZinga”, de app is ontwikkeld tot in productie, dit houdt in dat die op grote schaal gebruikt kan worden door Klabu. De zaken die zijn komen kijken bij het ontwikkelen naar productie zijn terug te vinden in het <a target="_blank" href="bugs.html"><u>bugs & production</u></a>  product.
                                         </p>
                                         <br>
                                         <hr>
@@ -206,7 +206,7 @@
                                                 <th>Beheer</th>
                                                 <th>
                                                     <br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/versie_beheer.html"><u>Versie beheer & overdraagbaarheid</u></a><br>
+                                                    • <a target="_blank" href="versie_beheer.html"><u>Versie beheer & overdraagbaarheid</u></a><br>
                                                     <br>
                                                 </th>
                                             </tr>
@@ -215,14 +215,14 @@
                                                 <th>Analyse</th>
                                                 <th>
                                                     <br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/project_document.html"><u>Project document</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/expert_interview.html"><u>Expert interview huidige situatie Klabu</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/database_model.html"><u>Database model</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/prototype.html"><u>Prototype booking & return flow</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/offline_oplossingen.html"><u>Offline oplossing</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/prototype_offline.html"><u>Offline prototypes</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/identiteit_koppelen.html"><u>Identiteit koppelen aan sportspullen</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/privacy_aspecten.html"><u>Privacy aspecten</u></a><br>
+                                                    • <a target="_blank" href="project_document.html"><u>Project document</u></a><br>
+                                                    • <a target="_blank" href="expert_interview.html"><u>Expert interview huidige situatie Klabu</u></a><br>
+                                                    • <a target="_blank" href="database_model.html"><u>Database model</u></a><br>
+                                                    • <a target="_blank" href="prototype.html"><u>Prototype booking & return flow</u></a><br>
+                                                    • <a target="_blank" href="offline_oplossingen.html"><u>Offline oplossing</u></a><br>
+                                                    • <a target="_blank" href="prototype_offline.html"><u>Offline prototypes</u></a><br>
+                                                    • <a target="_blank" href="identiteit_koppelen.html"><u>Identiteit koppelen aan sportspullen</u></a><br>
+                                                    • <a target="_blank" href="privacy_aspecten.html"><u>Privacy aspecten</u></a><br>
                                                     <br>
                                                 </th>
                                             </tr>
@@ -231,11 +231,11 @@
                                                 <th>Advies</th>
                                                 <th>
                                                     <br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/project_document.html"><u>Project document</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/expert_interview.html"><u>Expert interview huidige situatie Klabu</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/offline_oplossingen.html"><u>Offline oplossing</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/identiteit_koppelen.html"><u>Identiteit koppelen aan sportspullen</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/privacy_aspecten.html"><u>Privacy aspecten</u></a><br>
+                                                    • <a target="_blank" href="project_document.html"><u>Project document</u></a><br>
+                                                    • <a target="_blank" href="expert_interview.html"><u>Expert interview huidige situatie Klabu</u></a><br>
+                                                    • <a target="_blank" href="offline_oplossingen.html"><u>Offline oplossing</u></a><br>
+                                                    • <a target="_blank" href="identiteit_koppelen.html"><u>Identiteit koppelen aan sportspullen</u></a><br>
+                                                    • <a target="_blank" href="privacy_aspecten.html"><u>Privacy aspecten</u></a><br>
                                                     <br>
                                                 </th>
                                             </tr>
@@ -244,9 +244,9 @@
                                                 <th>Ontwerp</th>
                                                 <th>
                                                     <br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/database_model.html"><u>Database model</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/prototype.html"><u>Prototype booking & return flow</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/prototype_offline.html"><u>Offline prototypes</u></a><br>
+                                                    • <a target="_blank" href="database_model.html"><u>Database model</u></a><br>
+                                                    • <a target="_blank" href="prototype.html"><u>Prototype booking & return flow</u></a><br>
+                                                    • <a target="_blank" href="prototype_offline.html"><u>Offline prototypes</u></a><br>
                                                     <br>
                                                 </th>
                                             </tr>
@@ -255,9 +255,9 @@
                                                 <th>Realisatie</th>
                                                 <th>
                                                     <br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/prototype.html"><u>Prototype booking & return flow</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/prototype_offline.html"><u>Offline prototypes</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/klabu_app.html"><u>Klabu mobile app</u></a><br>
+                                                    • <a target="_blank" href="prototype.html"><u>Prototype booking & return flow</u></a><br>
+                                                    • <a target="_blank" href="prototype_offline.html"><u>Offline prototypes</u></a><br>
+                                                    • <a target="_blank" href="klabu_app.html"><u>Klabu mobile app</u></a><br>
                                                     <br>
                                                 </th>
                                             </tr>
@@ -266,9 +266,9 @@
                                                 <th>Oordeelsvorming</th>
                                                 <th>
                                                     <br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/project_document.html"><u>Project document</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/index.html"><u>Portfolio</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/leeswijzer.html"><u>Leeswijzer</u></a><br>
+                                                    • <a target="_blank" href="project_document.html"><u>Project document</u></a><br>
+                                                    • <a target="_blank" href="index.html"><u>Portfolio</u></a><br>
+                                                    • <a target="_blank" href="leeswijzer.html"><u>Leeswijzer</u></a><br>
                                                     <br>
                                                 </th>
                                             </tr>
@@ -277,11 +277,11 @@
                                                 <th>Communicatie</th>
                                                 <th>
                                                     <br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/versie_beheer.html"><u>Versie beheer & overdraagbaarheid</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/begrippenlijst.html"><u>Begrippenlijst</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/index.html"><u>Portfolio</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/leeswijzer.html"><u>Leeswijzer</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/reflectie.html"><u>Reflectie</u></a><br>
+                                                    • <a target="_blank" href="versie_beheer.html"><u>Versie beheer & overdraagbaarheid</u></a><br>
+                                                    • <a target="_blank" href="begrippenlijst.html"><u>Begrippenlijst</u></a><br>
+                                                    • <a target="_blank" href="index.html"><u>Portfolio</u></a><br>
+                                                    • <a target="_blank" href="leeswijzer.html"><u>Leeswijzer</u></a><br>
+                                                    • <a target="_blank" href="reflectie.html"><u>Reflectie</u></a><br>
                                                     <br>
                                                 </th>
                                             </tr>
@@ -290,8 +290,8 @@
                                                 <th>Leervermogen</th>
                                                 <th>
                                                     <br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/bugs.html"><u>Bugs & production</u></a><br>
-                                                    • <a target="_blank" href="https://luukvanettinger.github.io/afstudeerstageportfolio/reflectie.html"><u>Reflectie</u></a><br>
+                                                    • <a target="_blank" href="bugs.html"><u>Bugs & production</u></a><br>
+                                                    • <a target="_blank" href="reflectie.html"><u>Reflectie</u></a><br>
                                                     <br>
                                                 </th>
                                             </tr>
