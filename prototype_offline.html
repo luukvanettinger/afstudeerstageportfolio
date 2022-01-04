@@ -100,7 +100,7 @@
                                             </div>
                                             <p class="mb-30">
                                                 Door middel van de onderzoeksstrategie workshop met behulp van de onderzoeksmethode prototyping, ga ik de verschillende offline use cases van de app 
-                                                testen. Dit doe ik door de app op een Iphone device te runnen en hierbij verbreek ik het de internet connectie. Daarnaast houd ik de Cloud Firestore database hier langs 
+                                                testen. Dit doe ik door de app op een IPhone device te runnen en hierbij verbreek ik de internet connectie. Daarnaast houd ik de Cloud Firestore database hier langs 
                                                 om te bekijken wanneer er aanpassingen plaats vinden op basis van de inputs op het device. Op basis van deze resultaten zal er bekeken worden hoe deze 
                                                 resultaten invloed hebben op de offline use cases en of er verder onderzoek nodig is voor een oplossing op de onderzoeksvraag.
                                             </p>
@@ -115,7 +115,7 @@
                                                 <br>
                                                 <u>2. Member flow</u>,  gebruikers moeten een lijst kunnen zien van de members en de uitleen activiteiten die hierbij horen. Er moeten nieuwe members aangemaakt, verwijderd en aangepast kunnen worden.
                                                 <br>
-                                                <u>3. Stock flow</u>, gebruikers moeten een lijst kunnen zien van de stock items en de hoeveelheden hiervan, deze stock items moeten in de app ook aangepast kunnen worden
+                                                <u>3. Stock flow</u>, gebruikers moeten een lijst kunnen zien van de stock items en de hoeveelheden hiervan, deze stock items moeten in de app ook aangepast kunnen worden.
                                                 <br><br>
                                                 Deze use case flows moeten bruikbaar zijn voor de gebruiker van de app in zowel online als in offline mode. 
                                             </p>
@@ -134,7 +134,7 @@
                                                 <br>
                                                 Zoals is te zien in de video wordt de aanpassing offline gemaakt, maar de UI wordt wel geupdate. Dit komt doordat de app 
                                                 offline tegen een cached versie van de database praat. Zodra het device weer een internet connectie heeft wordt het bewaarde request verstuurd naar de database.
-                                                Het nadeel hiervan is zodra er meerdere gebruikers offline het geslacht van Harry aanpassen, dat het laatste request dat verzonden wordt "wint". 
+                                                Het nadeel hiervan is zodra er meerdere gebruikers offline het geslacht van Harry aanpassen, het laatste request dat verzonden wordt "wint". 
                                                 Wanneer gebruikers langere periodes zonder een netwerk verbinding zitten kan dit verlies van data requests veroorzaken.
                                             </p>
                                             <br><br>
@@ -154,6 +154,19 @@
                                                 worden de bookings automatisch toegevoegd aan de Cloud Firestore database. Hiermee wordt de UI van de app ook gelijk geupdate. Wat opvallend hierbij is, is dat 
                                                 de UI bij het aanmaken van een nieuw document, niet update terwijl die dit wel doet bij het aanpassen van een document.
                                             </p>
+                                            <p>
+                                                <b>Oplossing</b>
+                                                <br>
+                                                Hieronder is de code te zien van de functie voor het aanmaken van een booking. De oorzaak van het probleem is het aanmaken van een leeg document en deze vervolgens updaten met de bijhorende data.
+                                                Dit wordt gedaan zodat het door Firestore aangemaakte ID opgeslagen kan worden in het document zelf. Dit levert geen problemen op wanneer er een netwerk verbinding aanwezig is, maar zodat de app offline functioneert, kan het lege nieuwe document
+                                                niet opgehaald worden waardoor deze niet geupdate kan worden. 
+                                            </p>
+                                            <img style="margin-top: 0px;" src="images/code1.png" class="malvae"><br>
+                                            <p>
+                                                De oplossing is het zelf aanmaken van een ID door middel van een javascript library genaamd uuid. Deze ID kan vervolgens gebruikt worden bij het aanmaken van een booking. Hierdoor hoeft er niet gewacht te worden op het aanmaken van een Firestore ID. 
+                                                Doordat het document gelijk wordt aangemaakt met de bijhorende data wordt deze ook volledig opgeslagen in de cache van het device waardoor de nieuwe bookings in de UI worden weergegeven. Hieronder is de verbeterde code te zien van de functie voor het aanmaken van een booking.
+                                            </p>
+                                            <img style="margin-top: 0px;" src="images/code2.png" class="malvae"><br>
                                             <br><br>
                                             <p>
                                                 <b><u>3. Verwijderen van een booking</u></b>
@@ -168,18 +181,14 @@
                                                 <b>Resultaat</b>
                                                 <br>
                                                 De booking van Jane mood wordt offline verwijderd. Wanneer deze wordt verwijderd wordt de UI ook aangepast, daarnaast verdwijnt 
-                                                het rode "Due" label ook. Zodra de netwerk verbinding weer aanwezig is wordt het document ook in de Cloud Firestore database verwijderd. 
-                                                Opvallend hier is dat bij het verwijderen en aanpassen van documenten, de UI mee veranderd maar dat dit niet gebeurd bij het aanmaken van een nieuw document.
+                                                het rode "Due" label ook. Zodra de netwerk verbinding weer aanwezig is, wordt het document ook in de Cloud Firestore database verwijderd. 
                                             </p>
                                             <br><br>
                                             <div class="journal-txt">
                                                 <h4><a href="#">Conclusie</a></h4>
                                             </div>
                                             <p>
-                                                Uit de resultaten is gebleken dat wanneer het device geen netwerk verbinding heeft, er een kopie van de Cloud Firestore database
-                                                wordt gemaakt en verdere aanpassingen hiermee interacteren. Zodra het device weer een netwerk verbinding heeft worden de opgeslagen requests van de user 
-                                                naar de database verstuurd en synchroniseerd het device met de Cloud Firestore database. Hierbij viel op dat de UI bij het aanpassen en verwijderen van documenten 
-                                                offline werden geupdate maar dit gebeurde niet bij het aanmaken van nieuwe documenten.
+                                                Uit de resultaten is gebleken dat het opslaan van de database in de cache van het device werkt en dat het aanmaken, aanpassen en verwijderen van deze data gelijk in de UI van de app worden geupdate. Deze requests worden in volgorde opgeslagen en zodra er een netwerk verbinding is, worden deze requests verstuurd en wordt de cached data gesynchroniseerd met de data uit de online database.
                                             </p>
                                             <br><br><br>                                                                                 
                                         <div class="buttonContainer">
